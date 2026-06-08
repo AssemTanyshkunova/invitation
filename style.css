@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.scene, .lang-btn {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: popIn 0.7s ease forwards;
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+body{
+    background-image: url(images/texture.png);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+}
+
+.scene {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lang-btn {
+    width: 200px;          /* ширина */
+    height: 80px;          /* высота */
+    margin: 10px;
+
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;       /* размер текста */
+
+    border-width: 5px;
+    border-color: black;
+    border-radius: 20px;
+
+    background-color: white;
+    color: black;
+
+    cursor: pointer;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 200px;
+}
+
+.lang-btn:hover{
+    background-color: #000;
+    color: #fff;
+}
